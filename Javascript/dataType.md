@@ -15,26 +15,26 @@
 
 
 <br>
-> 문자열에서, var str = "coding";을 선언하고
-> str.length; 를 호출하면 6이 리턴된다.
-> 접근자를 이용할수있는 선언은 모두 '객체'라고 알고있다.
+> 문자열에서, var str = "coding";을 선언하고</br>
+> str.length; 를 호출하면 6이 리턴된다.</br>
+> 접근자를 이용할수있는 선언은 모두 '객체'라고 알고있다.</br>
 > 하지만, 결론부터 말하면 문자열은 객체타입은 아니다.
 
-> var str = new String("coding"); 과 같은 설정이 내부적으로 돌아가고
+> var str = new String("coding"); 과 같은 설정이 내부적으로 돌아가고</br>
 > 사용이 끝난 직후(str.length 호출 후) 객체성질을 소멸시킨다.
 
-> var str = "coding";
-> str.prop = "everybody"; //이 순간에는 객체로 취급되어 에러가 발생하지 않지만
-> console.log(str.prop); // undefined가 리턴된다.
+> var str = "coding";</br>
+> str.prop = "everybody"; //이 순간에는 객체로 취급되어 에러가 발생하지 않지만</br>
+> console.log(str.prop); // undefined가 리턴된다.</br>
 
-> JS에서는 문자열과 관련해 필요한 기능을 객체지향적으로 제공해야할 필요가 있다.
-> 그렇기때문에 Wrapper Object 객체가 원시 데이터 타입을 감싸고 있으며,
+> JS에서는 문자열과 관련해 필요한 기능을 객체지향적으로 제공해야할 필요가 있다.</br>
+> 그렇기때문에 Wrapper Object 객체가 원시 데이터 타입을 감싸고 있으며,</br>
 > 객체처럼 다루는것을 자동으로 처리하며 지원한다.(내부적으로, 즉 몰라도 됌)
 
-> 필요에 따라서 원시 데이터타입에 Wrapper 객체가 존재하는데,
-> 숫자     -> Number
-> 문자     -> String
-> T/F     -> Boolean
+> 필요에 따라서 원시 데이터타입에 Wrapper 객체가 존재하는데,</br>
+> 숫자     -> Number</br>
+> 문자     -> String</br>
+> T/F     -> Boolean</br>
 > null, undefined 는 없다.
 <br>
 ##**숫자**
