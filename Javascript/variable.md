@@ -4,6 +4,6 @@
 <br>
 
     var a=1; alert(a); // 세미콜론 필수
-    <br>
+    
     var a=1           // 세미콜론 선택
     alert(a)
