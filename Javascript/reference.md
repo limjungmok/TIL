@@ -28,16 +28,17 @@
 > b.id = 2;</br>
 > console.log(a.id); // 2 가 리턴된다.</br>
 
-
+</br>
 cf) 헷갈리지 말아야 할 예제
+</br>
 > var a = {'id' : 1}
 > var b = a;          // 여기서 b와 a는 같은 주소를 가리킨다.</br>
 > **b = {'id' : 2};** // 하지만 여기서 b에 새로운 객체를 넣은것이고, a와 다른 주소를 가리킨다.</br>
 > console.log(a.id);  // 1 이 리턴된다.</br>
 
-
-
+</br>
 cf) 함수를 통한 참조 예제
+</br>
 > var a = {'id' : 1}</br>
 > function func(b){</br>
 >   **b.id = 2;**</br>
