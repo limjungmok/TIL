@@ -6,14 +6,14 @@ This란 흔히 객체지향 언어에서 볼수있는 단어다.
 
 자바스크립트에서는 자주 쓰이므로 확실하게 구분해놓자.
 
-`
+```javascript
 function a(){
   alert('hello');
 }
 
 a();
 window.a();
-`
+```
 
 함수를 전역에 선언했기 때문에,
 window 객체(다른 언어에서의 Object라 생각하면 쉬움) 내에서
