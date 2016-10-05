@@ -7,7 +7,7 @@
 
 <br>
 ---
-
+</br>
 ```javascript
     // numbering 이라는 함수를 선언하고
     function numbering(){
