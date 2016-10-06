@@ -11,7 +11,7 @@
 
 ---------
 
-####**props.컴포넌트명**
+###**props.컴포넌트명**
 </br>
 > 해당 예제는 App 컴포넌트를 렌더링해주는데, Codelab 컴포넌트를 App 컴포넌트 내에서 호출한다.<br>
 > 즉, <App></App> 컴포넌트를 ReactDOM에 렌더링 해주는데,</br>
@@ -52,7 +52,7 @@ ReactDOM.render(<App render_name="World">칠드런은 다들고있어요</App>, 
 
 -------------
 
-####**Component.defaultProps**
+###**Component.defaultProps**
 </br>
 > props로 넘겨받을 기본값을 셋팅해준다.
 
@@ -68,6 +68,6 @@ App.propTypes = {
 </br>
 --------------
 
-####**Refer**
+###**Refer**
 </br>
 >React Props Offical Doc : https://facebook.github.io/react/docs/reusable-components-ko-KR.html
