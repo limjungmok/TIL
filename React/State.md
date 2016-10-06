@@ -27,12 +27,14 @@ class Counter extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     // 밑에 button onClick 핸들러와 handleClick 메서드를 바인딩해준다.
   }
+  
   // 버튼클릭시 호출할 핸들러 메서드
   handleClick(){
     this.setState({
       value:this.state.value + 1
     });
   }
+
   render() {
     return (
       <div>
