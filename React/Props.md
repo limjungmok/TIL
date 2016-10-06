@@ -1,5 +1,5 @@
 #**Props**
-> 컴포넌트간 정적 데이터를 넘겨줄때 사용한다.<br>
+> 컴포넌트간(parent 컴포넌트 -> child 컴포넌트) 정적 데이터를 넘겨줄때 사용한다.<br>
 > {this.props.정적데이터이름} <br>
 > {this.props.children} <br>
 </br>
