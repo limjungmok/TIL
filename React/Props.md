@@ -1,5 +1,4 @@
 #**Props**
-</br>
 > 컴포넌트간 정적 데이터를 넘겨줄때 사용한다.<br>
 > {this.props.정적데이터이름} <br>
 > {this.props.children} <br>
@@ -11,8 +10,7 @@
 
 ---------
 
-###**props.컴포넌트명**
-</br>
+###**{this.props.컴포넌트명}**
 > 해당 예제는 App 컴포넌트를 렌더링해주는데, Codelab 컴포넌트를 App 컴포넌트 내에서 호출한다.<br>
 > 즉, <App></App> 컴포넌트를 ReactDOM에 렌더링 해주는데,</br>
 > HTML에서 속성태그를 넣듯이 해당 컴포넌트에 props 이름을 지정해서 넘겨주는거다.</br>
@@ -53,9 +51,9 @@ ReactDOM.render(<App render_name="World">칠드런은 다들고있어요</App>, 
 -------------
 
 ###**Component.defaultProps**
-</br>
-> props로 넘겨받을 기본값을 셋팅해준다.
-
+> props로 넘겨받을 기본값을 셋팅해준다.<br>
+> 선택사항이고, 없어도 문제가 없다.<br>
+> 하지만 여러 개발자가 협업할 때, default 값을 제한걸어준다면 더욱 효율적일것이다.<br>
 </br>
 
 ```javascript
@@ -69,5 +67,4 @@ App.propTypes = {
 --------------
 
 ###**Refer**
-</br>
 >React Props Offical Doc : https://facebook.github.io/react/docs/reusable-components-ko-KR.html
