@@ -17,7 +17,7 @@
 > 그렇게되면 App 컴포넌트는 정적인 props.render_name 을 받고,</br>
 > App 컴포넌트가 Codelab을 렌더링하면서 동시에 name이라는 props에 자신이 받은 render_name을 넘겨준다.</br>
 > 가장 하위 Codelab 컴포넌트에서는 App 컴포넌트를 생성하며 전달한 정적 props를 최종으로 넘겨받고,</br>
-> JSX 문법을 이용해서 immunable한 값을 렌더링해주는것이다.</br>
+> JSX 문법을 이용해서 immutable 성질의 값을 렌더링해주는것이다.</br>
 
 > cf) props.children의 경우, 모든 컴포넌트가 갖고있는 프로퍼티값이라 생각하면 쉽다.</br>
 > 해당 children 값은 블록 사이의 텍스트를 넘겨받아, 하위 컴포넌트의 JSX 문법 내에서 렌더링해준다.
