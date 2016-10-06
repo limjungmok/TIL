@@ -10,7 +10,7 @@
 <br>
 
 ####**App.js**
-
+---
 ```javascript
 //JSX형태의 컴포넌트다
 class Codelab extends React.Component{
@@ -47,10 +47,17 @@ class App extends React.Component{
 ReactDOM.render(<App/>, document.getElementById('root'));
 ```
 
-<br>
+</br>
 
 ####**index.html**
-
+---
 ```
 <div id="root"></div>
 ```
+</br>
+
+
+####**Refer**
+---
+
+인프런 JSX : https://velopert.com/867
