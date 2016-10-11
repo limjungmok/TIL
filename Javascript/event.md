@@ -45,25 +45,25 @@
 ####DOM 레벨 0 이벤트 핸들러
 var btn = document.getElementById("myDiv"); //버튼에 대한 참조를 얻고<br>
 btn.onClick = function(){
-  alert(this.id);   // 버블링에 따라 myDiv를 호출한다.
+  alert(this.id);                           // 버블링에 따라 myDiv를 호출한다.
 };
-btn.onClick = null; // click이벤트의 핸들러인 onClick 리스너를 제거한다.
+btn.onClick = null;                         // click이벤트의 핸들러인 onClick 리스너를 제거한다.
 
 //
 ####DOM 레벨 2 이벤트 핸들러
 btn.addEventListener("click", function(){ // click 이벤트에 핸들러를 추가해줄수있다.(중복추가가능))
   alert(this.id);
-}, false); //버블링 단계에서 마지막 매개변수 false
+}, false);                                //버블링 단계에서 마지막 매개변수 false
 btn.addEventListener("click", function(){ // 밑에있는애가 나중에 호출된다.(IE와 반대)
   alert("Hello World!");
 }, false);
 
 //
-var handler_example = function(){ //이벤트 핸들러를 하나 만들고
+var handler_example = function(){                         //이벤트 핸들러를 하나 만들고
   alert(this.id);
 };
 btn.addEventListener("click", handler_example, false);    // 핸들러 객체를 추가를 해준다면,
-btn.removeEventListener("click", handler_example, false); // 똑가은 핸들러를 삭제해준다.
+btn.removeEventListener("click", handler_example, false); // 똑같은 핸들러를 삭제해준다.
 
 //
 ####IE 이벤트 핸들러
