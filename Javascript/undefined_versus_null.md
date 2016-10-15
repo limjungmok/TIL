@@ -24,3 +24,8 @@ console.log(typeof check);      // object
 console.log(null == undefined); // true (Null 이 상위값이다.)
 console.log(null === undefined);// false(완벽하게 같지 않다.)
 ```
+<br>
+####**Refer**
+---
+
+Tistory muckycode : https://muckycode.blogspot.kr/2015/01/javascript-undefined-null.html
