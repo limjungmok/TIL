@@ -39,5 +39,5 @@ console.log(age);               // 30으로 출력된다
 ####**Refer**
 ---
 
-Tistory RESONEIT   : http://resoneit.blogspot.kr/2014/01/this.html
+Tistory RESONEIT   : http://resoneit.blogspot.kr/2014/01/this.html <br>
 github.io hyunseob : https://hyunseob.github.io/2016/03/10/javascript-this/
