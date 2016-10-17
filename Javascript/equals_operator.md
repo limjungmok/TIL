@@ -6,8 +6,8 @@
 
 
 ```javascript
-console.log(1 == "1"); //true
-console.log(1 === "1");//false
+console.log(1 == "1");    //true
+console.log(1 === "1");   //false
 
 console.log(true == "1"); //true
 console.log(true == 1);   //true
@@ -17,8 +17,8 @@ console.log(0 === -0);    //true
 console.log(NaN == NaN);  //false
 console.log(NaN === NaN); //false NaN 의 경우 0/0 과 같은 연산으로 특수한 데이터 형태인데 숫자값이 아니라는 뜻이다
 
-console.log(null == undefined); //true  null의 경우 값이 없음을 명시적으로 표시한것이고  (빈 객체를 표현)
-console.log(null === undefined);//false undefined의 경우 값이 없는 상태를 표현하는것이다(초기화되지 않은 변수)
+console.log(null == undefined);  //true  null의 경우 값이 없음을 명시적으로 표시한것이고  (빈 객체를 표현)
+console.log(null === undefined); //false undefined의 경우 값이 없는 상태를 표현하는것이다(초기화되지 않은 변수)
 ```
 <br>
 
