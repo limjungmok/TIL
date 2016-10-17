@@ -2,8 +2,9 @@
 > Scope와, 호출자가 누구인지에 따라 값이 결정된다.<br>
 > 자바스크립트에서는 global 객체가 존재하며, 브라우저에서 window 객체가 그 역할을 하고있다.<br>
 > 기본적으로 this는 global 객체이고, function영역 내부에서 this는 부모 객체를 나타낸다.<br>
-<br>
+
 ---
+
 <br>
 ```javascript
 function Person(name, age) {
