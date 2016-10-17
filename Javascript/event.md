@@ -82,7 +82,8 @@ btn.removeEventListener("click", handler_example, false); // 똑같은 핸들러
 > 이벤트 핸들러 내부에서 <b>this</b>는 항상 currentTarget의 값과 일치하고<br>
 > target에는 이벤트의 실제 타겟만 포함된다.<br>
 > (즉, 이벤트 핸들러가 타겟에 직접 할당된경우는 this, currentTarget, target이 모두 같다.)<br>
-> 예를들어 이벤트 핸들러가 원하는 타깃의 조상노드에 할당된경우는 값이 또 다르다..<br> 
+> 예를들어 이벤트 핸들러가 원하는 타깃의 조상노드에 할당된경우는 값이 또 다르다..<br>
+
 
 <br>
 ----
@@ -94,6 +95,8 @@ btn.removeEventListener("click", handler_example, false); // 똑같은 핸들러
 > 이벤트 핸들러의 갯수는 페이지 성능에 직접적인 영향을 끼친다.<br>
 > 1) 각 함수는 메모리를 점유하는 객체다.<br>
 > 2) 핸들러를 많이 할당하면 DOM 접근이 많아지고, 페이지의 응답성을 떨어뜨린다.<br>
+
+#####How Solve?
 
 1. 버블링의 장점을 이용해 document 레벨(또는 window 레벨)까지 거슬러 올라가 페이지 전체에 하나만 할당한다.
   DOM 트리에서 가능한 가장 높은요소의 이벤트에 핸들러를 할당한다.
