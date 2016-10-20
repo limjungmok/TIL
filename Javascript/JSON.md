@@ -3,9 +3,10 @@
 > [ ] : 배열<br>
 > { } : 객체<br>
 > JSON.stringify(Object) 를 이용해 <b>배열 -> JSON 문자열</b>로 변환<br>
-> 단순한 문자열 객체를 Json 형태의 문자열로 변환해 사용한다.
+> 단순한 문자열 객체를 Json 형태의 문자열로 변환해 사용한다.<br>
 > JSON.parse(JsonText)   를 이용해 <b>JSON 문자열 -> JSON Object</b>로 변환<br>
 > Json 문자열을 parse 함으로써 객체처럼 자유롭게 사용할 수 있다.
+
 ---
 
 ```javascript
