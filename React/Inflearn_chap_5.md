@@ -42,8 +42,9 @@ class App extends React.Component {
     }
 }
 export default App;
+```
 
-
+```javascript
 [RandomNumber.js]
 import React from 'react';
 
