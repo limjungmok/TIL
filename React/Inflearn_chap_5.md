@@ -9,7 +9,7 @@
 ---
 
 ```javascript
-<b>App.js</b>
+[App.js]
 import React from 'react';
 import Contact from './Contact';
 import RandomNumber from './RandomNumber';
@@ -44,7 +44,7 @@ class App extends React.Component {
 export default App;
 
 
-<b>RandomNumber.js</b>
+[RandomNumber.js]
 import React from 'react';
 
 export default class RandomNumber extends React.Component{
