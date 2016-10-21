@@ -82,7 +82,7 @@ setName(person); //참조타입의 person 객체를 넘긴다.
 console.log(person.name); // Nicolas
 
 ```
-
+<br>
 ---
 <br>
 ##**숫자**
@@ -100,6 +100,7 @@ JS에서는 따옴표(", ')가 붙어있지 않으면, 숫자로 취급한다.
     Math.sqrt(9);        // 3,   3의 제곱근(루트 9)<br>
     Math.random();       // 0부터 1.0 사이의 랜덤한 숫자
 ```
+<br>
 ---
 <br>
 ##**문자**
@@ -114,3 +115,11 @@ JS에서 따옴표(", ')로 감싸진 문자열이면, 문자로 취급한다.
     alert("안녕하세요.\n생활코딩의 세계에 오신 것을 환영합니다"); // 여러줄 가능<br>
     alert("coding"+" everybody");                     // coding everybody<br>
 ```
+
+<br>
+---
+<br>
+
+##**Reference**
+
+생활코딩 : https://opentutorials.org/course/743/4647
