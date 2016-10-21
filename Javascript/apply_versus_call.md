@@ -5,9 +5,6 @@
 apply, call의 실행결과는 완벽하게 같다. 차이점은 매개변수를 호출하는 방법이 다르다는점.<br>
 <b>apply와 call을 사용하면 객체에 메서드를 모두 등록할 필요가 없다.</b> 즉, 스코프를 다르게 해서 유연하게 메서드를 사용할 수 있다.<br>
 
----
-<br>
-
 ##**Apply**
 
 apply의 경우, arguments 객체를 그대로 전달해도 되거나, 매개변수로 전달할 데이터가 이미 배열형태로 준비된 경우 사용<br>
@@ -30,11 +27,12 @@ console.log(callSum1(10,10)); // 결과가 똑같다.
 console.log(callSum2(10,10));
 
 ```
-
 <br>
 ---
 <br>
 ##**Call**
+
+call과 apply의 동작은 동일하고, 매개변수를 직접 나열해야한다는 차이점이 있다.<br>
 
 ```javascript
 function callSum(num1, num2){ // 위의 apply와 다른점은, call을 사용할 땐 반드시 매개변수를 각각 나열해야한다.
