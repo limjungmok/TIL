@@ -1,8 +1,6 @@
 #**Form Tag**
 > Post방식으로 서버에 값을 push(갱신)할 때 사용한다.
 
-<br>
-
 ```javascript
 <form action = "요청주소" method="POST"/>
      ID : <input type ="text" name = "id"/>
