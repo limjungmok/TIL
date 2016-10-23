@@ -9,14 +9,22 @@
 --------
 <br>
 ```c++
-arr = {5,4,3,2,1};
-int length = arr.length;
+int main(void)
+{
+    int arr[5]={5,2,4,3,1};
 
-for(int i=0; i < (length-1) ; i++){     // 총 (배열크기-1) 번 실시한다.(가장마지막 숫자 1은 비교 필요없다)
-  for(int j=0; j < (length-1 -i); j++){ // 5를 가지고 4개와 비교, 4를 가지고 3개와 비교, ... 비교대상 줄어듬
-    if( arr[ j ] > arr[ j+1] ){         // 앞에가 크면 뒤에꺼랑 교환한다.
-      Swap(j, j+1);
+
+    for(int i=0; i < 5-1; i++) {        // 4번만 돌면 된다.
+        for(int j=0; j< 5-1-i; j++){    // 3번만 돌면 된다.
+            if(arr[j] > arr[j+1])       // 앞의 숫자가 뒤의 숫자보다 크다면
+                swap(arr[j], arr[j+1]); // 앞뒤 숫자를 변경한다.
+        }
     }
-  }
+
+    for(int i=0; i<5; i++) {
+        cout<<arr[i]<<" ";
+    }
+
+    return 0;
 }
 ```
