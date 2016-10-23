@@ -6,16 +6,27 @@
 --------
 <br>
 ```c++
-arr = {5,3,2,1,4};
+int main(void)
+{
+    int arr[5]={5,2,4,3,1};
 
-for (int i = 1; i < arr.length; i++) { // 5 3 2 1 4 일때
-  int key = arr[i];  // 기준
-  int aux = i - 1;   // 비교할 대상, 일단 바로앞에꺼랑 먼저 비교해보고
+    {2,5,4,3,1}
 
-  while ( aux >= 0 &&  arr[aux] > key ) {  // 5 > 3 인경우
-    arr[aux + 1] = arr[aux];   // 비교대상이 큰 경우 오른쪽으로 밀어냄
-    aux--;
-  } // aux가 -1이 되면, 빠져나가는데
-  arr[aux + 1] = key;  // 기준값 저장(혹시나 -1이면 0이 되겠지)
+    for(int i = 1; i < 5; i++) { // 총 4번 돌고
+        int key = arr[i];        // key 값은 제일 처음 배열값
+        int aux = i-1;           // 비교해야 할 aux 는 시작값 바로 왼쪽 값부터 내려간다.
+
+        while(aux >=0 && arr[aux] > key){ // aux의 인덱스가 존재하고, aux번째 배열이 key보다 큰 경우일때까지
+            arr[aux + 1] = arr[aux];      // aux+1 구간에다가 지금의 aux를 넣어주고(단순 삽입)
+            aux--;                        // 한단계 왼쪽의 aux를 비교하기위해 aux를 감소한다.
+        }
+        arr[aux+1] = key;                 // 비교가 끝난 후 aux+1번째에는 무조건 key를 넣어준다.
+    }
+
+    for(int i=0; i<5; i++) {
+        cout<<arr[i]<<" ";
+    }
+
+    return 0;
 }
 ```
