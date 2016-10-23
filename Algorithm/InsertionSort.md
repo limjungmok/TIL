@@ -10,8 +10,6 @@ int main(void)
 {
     int arr[5]={5,2,4,3,1};
 
-    {2,5,4,3,1}
-
     for(int i = 1; i < 5; i++) { // 총 4번 돌고
         int key = arr[i];        // key 값은 제일 처음 배열값
         int aux = i-1;           // 비교해야 할 aux 는 시작값 바로 왼쪽 값부터 내려간다.
