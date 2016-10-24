@@ -63,22 +63,23 @@ value= 10
 4. 가장 하위 innerFunction에서 형성된 부모/자식관계를 이용해 변수 a,b,c 모두에 대한 유효 Scope를 가지게 되고, 참조가 가능하다.
 
 ```javascript
-var a = 10;
+var a = 10; // 전역 Scope
 
-function outerFunction(){
+function outerFunction(){ // 전역 Scope
 
-    var b = 20;
+    var b = 20;               // outerFunction Scope
 
-    function innerFunction(){
-        var c = 30;
+    function innerFunction(){ // outerFunction Scope
 
-        console.log(a,b,c);
+        var c = 30;               // innerFunction Scope
+
+        console.log(a,b,c);       // innerFunction Scope
     }
 
-    return innerFunction();
+    return innerFunction();   // outerFunction Scope
 }
 
-outerFunction();
+outerFunction();          // 전역 Scope
 //실행결과
 // 10 20 30
 ```
