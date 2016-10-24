@@ -53,3 +53,32 @@ value= undefined
 value= 10  
 */
 ```
+##**Scope Chain**
+유효범위 체인이란, 함수가 중첩함수일 경우 상위함수의 유효 Scope까지 흡수하는 것이다.<br>
+즉, 하위함수(내부함수)가 실행되는 동안, 상위함수의 유효 Scope 내에 존재하는 변수 및 함수의 메모리를 참조하는 것이다.<br>
+
+1. 전역 Scope에서 a와 outerFunction에 대한 유효 Scope가 생성되어있고, outerFunction을 호출한다.
+2. 호출된 outerFunction은 전역함수 내에서 중첩되어있으므로 내부 함수에서 부모/자식관계가 형성된다.
+3. outerFunction에서 innerFunction 을 리턴하므로, 부모/자식관계가 형성된다.
+4. 가장 하위 innerFunction에서 형성된 부모/자식관계를 이용해 변수 a,b,c 모두에 대한 유효 Scope를 가지게 되고, 참조가 가능하다.
+
+```javascript
+var a = 10;
+
+function outerFunction(){
+
+    var b = 20;
+
+    function innerFunction(){
+        var c = 30;
+
+        console.log(a,b,c);
+    }
+
+    return innerFunction();
+}
+
+outerFunction();
+//실행결과
+// 10 20 30
+```
