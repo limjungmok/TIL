@@ -37,6 +37,7 @@ Hoisting 속성때문에 함수 내에서 전역변수를 참조하지 않고,<b
 * ex)  function A( ){ ... }          // <b>함수 선언문</b> 형태, Hoisting 가능
 *      var a = function( ){ ... }    // <b>함수 표현식</b> 형태, Hoisting 불가능
 *      var b = new Function( );      // <b>생성자</b> 형태, Hoisting 불가능
+<br>
 
 ```javascript
 var value = 30;
@@ -52,6 +53,16 @@ hoistingExam();
 value= undefined  
 value= 10  
 */
+
+var value = 30;
+function hoistingExam(){
+    console.log("value = " + value);
+    var value;
+    console.log("value = " + value);
+}
+hoistingExam();  
+// 실행결과(함수 선언을 호이스팅 하기때문에, 둘다 undefined 호출)
+
 ```
 ##**Scope Chain**
 유효범위 체인이란, 함수가 중첩함수일 경우 상위함수의 유효 Scope까지 흡수하는 것이다.<br>
