@@ -61,7 +61,7 @@ function hoistingExam(){
     console.log("value = " + value);
 }
 hoistingExam();  
-// 실행결과(함수 선언을 호이스팅 하기때문에, 둘다 undefined 호출)
+// 실행결과(함수 선언을 호이스팅 하기때문에, 둘다 undefined 호출) 
 
 ```
 ##**Scope Chain**
