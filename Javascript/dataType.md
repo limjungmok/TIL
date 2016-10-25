@@ -6,7 +6,7 @@
 <br>
 ##**원시(기본) 데이터 타입**
 
-숫자, 문자(열), true/false, null, undefined<br>
+숫자(기본 8bytes), 문자(열), true/false, null, undefined<br>
 원시 데이터 타입변수는 '값'으로 접근하는데, <b>변수에 저장된 실제값</b>을 조작한다.
 
 <br>
