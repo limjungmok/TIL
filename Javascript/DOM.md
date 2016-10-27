@@ -22,14 +22,14 @@ getElementById(객체 하나), getElementsByTagName(객체 그룹)을 통해 기
 (id속성과 대소문자 구분하여 완벽하게 일치해야한다.)<br>
 
 ```javascript
-< div id="myDiv" >Some text</div>
+<div id="myDiv">Some text</div>
 
 var div = document.getElementById("myDiv");
 //div에 대한 참조를 가져온다.
 
-< imag src="1.jpg" name="myImage" >
-< imag src="2.jpg" >
-< imag src="3.jpg" >
+<imag src="1.jpg" name="myImage">
+<imag src="2.jpg">
+<imag src="3.jpg">
 
 var images = document.getElementsByTagName("img");
 // img 객체의 집합을 구성하는 HTMLCollection을 반환한다.
