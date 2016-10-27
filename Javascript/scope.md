@@ -6,7 +6,7 @@
 ---
 
 ##**Lexical 특성**
-렉시컬 특징은, 함수 실행시 유효범위를 함수 정의 환경으로 참조하는 특성이다.<br>
+렉시컬 특징은, 함수 실행시 유효범위를 <b>함수를 정의한 내부환경으로 제한</b>해서 참조하는 특성이다.<br>
 밑의 코드를 보면, f2 함수가 f1 내부에서 호출된다고 해서, f1 의 지역변수 a를 참조할 수 있는건 아니다.<br>
 렉시컬 특성으로 인해 f2 가 실행될 때 자신이 정의된 환경을 참조하기 때문에, a 변수를 찾을 수 없다.<br>
 
@@ -30,13 +30,14 @@ Uncaught Reference Error
 ##**Hoisting**
 <b>변수의 선언문</b>을 끌어올린다는 뜻이다.<br>
 Hoisting 속성때문에 함수 내에서 전역변수를 참조하지 않고,<br>
-함수 내부의 지역변수 value의 선언을 최상단으로 끌어올린다.<br>
+<b>함수 내부의 지역변수 value의 선언</b>을 ####최상단으로 끌어올린다.<br>
 하지만, <b>value의 선언</b> 자체만 끌어올리는것이지, 10이라는 초기화된 값을 끌어올리진 않는다.<br><br>
 
 * 단, Hoisting 속성은 함수 선언문에서만 적용되는 특성이다.
-* ex)  function A( ){ ... }          // <b>함수 선언문</b> 형태, Hoisting 가능
-*      var a = function( ){ ... }    // <b>함수 표현식</b> 형태, Hoisting 불가능
-*      var b = new Function( );      // <b>생성자</b> 형태, Hoisting 불가능
+ex)<br>  
+* function A( ){ ... }          // <b>함수 선언문</b> 형태, Hoisting 가능
+* var a = function( ){ ... }    // <b>함수 표현식</b> 형태, Hoisting 불가능
+* var b = new Function( );      // <b>생성자</b> 형태, Hoisting 불가능
 <br>
 
 ```javascript
@@ -61,7 +62,7 @@ function hoistingExam(){
     console.log("value = " + value);
 }
 hoistingExam();  
-// 실행결과(함수 선언을 호이스팅 하기때문에, 둘다 undefined 호출) 
+// 실행결과(함수 선언을 호이스팅 하기때문에, 둘다 undefined 호출)
 
 ```
 ##**Scope Chain**
