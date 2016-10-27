@@ -66,6 +66,7 @@ hoistingExam();
 
 ```
 ##**Scope Chain**
+Closure개념과 같이 생각하자.<br>
 유효범위 체인이란, 함수가 중첩함수일 경우 상위함수의 유효 Scope까지 흡수하는 것이다.<br>
 즉, 하위함수(내부함수)가 실행되는 동안, 상위함수의 유효 Scope 내에 존재하는 변수 및 함수의 메모리를 참조하는 것이다.<br>
 
@@ -78,13 +79,10 @@ hoistingExam();
 var a = 10; // 전역 Scope
 
 function outerFunction(){ // 전역 Scope
-
     var b = 20;               // outerFunction Scope
 
     function innerFunction(){ // outerFunction Scope
-
         var c = 30;               // innerFunction Scope
-
         console.log(a,b,c);       // innerFunction Scope
     }
 
