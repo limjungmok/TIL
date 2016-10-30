@@ -51,7 +51,6 @@ Hoisting 속성때문에 함수 내에서 전역변수를 참조하지 않고,<b
 하지만, <b>value의 선언</b> 자체만 끌어올리는것이지, 10이라는 초기화된 값을 끌어올리진 않는다.<br><br>
 
 * 단, Hoisting 속성은 함수 선언문에서만 적용되는 특성이다.
-ex)<br>  
 * function A( ){ ... }          // <b>함수 선언문</b> 형태, Hoisting 가능
 * var a = function( ){ ... }    // <b>함수 표현식</b> 형태, Hoisting 불가능
 * var b = new Function( );      // <b>생성자</b> 형태, Hoisting 불가능
