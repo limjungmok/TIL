@@ -11,6 +11,7 @@
 렉시컬 특성으로 인해 f2 가 실행될 때 자신이 정의된 환경을 참조하기 때문에, a 변수를 찾을 수 없다.<br>
 
 ```javascript
+[Lexical 특징]
 function f1(){  
     var a = 10;
     f2();
@@ -28,6 +29,7 @@ Uncaught Reference Error
 : a is not defined
 */
 
+[클로저 특징]
 function f1(){
     var a = 10;
 
