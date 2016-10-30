@@ -12,9 +12,10 @@
 
 ```javascript
 function f1(){  
-    var a= 10;
+    var a = 10;
     f2();
 }
+
 function f2(){  
     return a; // f2 내부에는 지역변수 a가 선언되어있지 않아서 참조할 수 없다.
 }
@@ -26,6 +27,20 @@ f1();
 Uncaught Reference Error  
 : a is not defined
 */
+
+function f1(){
+    var a = 10;
+
+    function f2(){      // 클로저 성질 때문에, 외부함수가 호출되고 생명주기가 종료되어도,
+        console.log(a); // 내부함수에서 외부함수의 변수를 참조할수있다.(scope chain 형성)
+    }
+    f2();
+}
+
+f1();
+//실행결과
+//10
+
 ```
 ##**Hoisting**
 <b>변수의 선언문</b>을 끌어올린다는 뜻이다.<br>
