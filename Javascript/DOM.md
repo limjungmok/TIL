@@ -7,7 +7,7 @@ IE, Chrome, Safari, FireFox, Opera 는 최신 DOM 을 구현했다.<br>
 
 ###**Node 타입**
 
-nodeName, nodeValue 프로퍼티를 통해 노드의 정보를 제공한다.<br>
+nodeName, nodeValue, nodeType 프로퍼티를 통해 노드의 정보를 제공한다.<br>
 
 
 ###**Document**
@@ -21,26 +21,20 @@ HTMLDocument 는 Document를 상속한다.<br>
 getElementById(객체 하나), getElementsByTagName(객체 그룹)을 통해 기능을 제공한다.<br>
 (id속성과 대소문자 구분하여 완벽하게 일치해야한다.)<br>
 
+<br>
 ```javascript
 <div id="myDiv">Some text</div>
 
 var div = document.getElementById("myDiv");
 //div에 대한 참조를 가져온다.
 
-<imag src="1.jpg" name="myImage">
-<imag src="2.jpg">
-<imag src="3.jpg">
+<img src="1.jpg" name="myImage">
+<img src="2.jpg">
+<img src="3.jpg">
 
 var images = document.getElementsByTagName("img");
 // img 객체의 집합을 구성하는 HTMLCollection을 반환한다.
 var myImage = images["myImage"];
 // 원하는 index의 key값을 통해 value 접근 가능
 ```
-
-
 <br>
-
-###**Element**
-
-문서의 HTML 및 XML '요소' 전체를 표현<br>
-각 요소의 콘텐츠와 속성을 조작하는 데 사용한다.
