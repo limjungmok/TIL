@@ -2,7 +2,7 @@
 하위 컴포넌트에 상위 컴포넌트의 State를 매핑해야하는 경우가 있다.<br>
 상위 컴포넌트의 State를 하위 컴포넌트에서 반복적으로 보여줄 경우,<br>
 콜백함수를 이용해 컴포넌트 + props를 리턴하면 된다.<br>
-
+<br>
 ```javascript
 //하위 컴포넌트
 class ContactInfo extends React.Component {
