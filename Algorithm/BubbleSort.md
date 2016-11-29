@@ -1,30 +1,53 @@
 #**버블소트**
+가장 기본적으로 둘씩 짝지어서 비교, 정렬<br>
+for문을 2번 이용하기때문에 수행시간은 O(n^2)이다.<br>
 
-> 가장 기본적으로 둘씩 짝지어서 비교, 정렬<br>
-> for문을 2번 이용하기때문에 수행시간은 O(n^2)이다.<br>
+###**흐름**
 
-> 기본적으로 0번째 배열값을 비교할때는,
->
+초기값 </br>
+5 2 4 3 1</br>
+</br>
+첫번째 반복</br>
+2 4 3 1 5</br>
+</br>
+두 번째 반복</br>
+2 4 1 3 5</br>
+</br>
+세 번째 반복</br>
+2 1 3 4 5</br>
+</br>
+네 번째 반복</br>
+1 2 3 4 5</br>
+</br>
 
---------
-<br>
+> 총 배열의 크기 -1 만큼 순회한다.</br>
+> 동시에 (0,1) (1,2) (2,3) (n-1-(i-1), n-1-(i)) 까지 비교해간다.</br> 
 ```c++
-int main(void)
-{
-    int arr[5]={5,2,4,3,1};
+#include <iostream>
+using namespace std;
+
+void swap(int *a, int *b){
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 
-    for(int i=0; i < 5-1; i++) {        // 4번만 돌면 된다.
-        for(int j=0; j< 5-1-i; j++){    // 3번만 돌면 된다.
-            if(arr[j] > arr[j+1])       // 앞의 숫자가 뒤의 숫자보다 크다면
-                swap(arr[j], arr[j+1]); // 앞뒤 숫자를 변경한다.
+int main(void){
+    int arr[5] = {5,2,4,3,1};
+
+    for(int i=0; i<4; i++){
+        for(int j=0; j<4-i; j++){
+            if(arr[j] > arr[j+1]){
+                swap(arr[j], arr[j+1]);
+            }
         }
     }
 
-    for(int i=0; i<5; i++) {
+    for(int i=0; i<5; i++){
         cout<<arr[i]<<" ";
     }
-
     return 0;
 }
 ```
