@@ -36,7 +36,7 @@ for문을 2번 이용하기 때문에 수행시간은 O(N^2)<br>
 > 시작 인덱스의 바로 앞 배열인자와 버블소트 방식으로 역순으로 비교한다.</br>
 <br>
 
-
+###**2. 소스코드**
 ```c++
 #include <iostream>
 using namespace std;
