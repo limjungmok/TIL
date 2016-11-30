@@ -21,6 +21,7 @@ Pivot을 기준으로 큰 값은 오른쪽으로 옮기는 정렬방식</br>
 
 </br>
 
+###**2. 소스코드**
 ```c++
 #include <iostream>
 using namespace std;
