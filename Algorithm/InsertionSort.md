@@ -42,7 +42,7 @@ for문을 2번 이용하기 때문에 수행시간은 O(N^2)<br>
 > 최소값을 갱신 해 나간다.
 <br>
 
-
+###**2. 소스코드**
 ```c++
 #include <iostream>
 using namespace std;
