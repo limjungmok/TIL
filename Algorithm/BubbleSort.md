@@ -24,6 +24,7 @@ for문을 2번 이용하기때문에 수행시간은 O(n^2)이다.<br>
 > 동시에 (0,1) (1,2) (2,3) (n-1-(i-1), n-1-(i)) 까지 비교해간다.</br>
 </br>
 
+###**2. 소스코드**
 ```c++
 #include <iostream>
 using namespace std;
