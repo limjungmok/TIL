@@ -51,16 +51,16 @@ int binarySearch(int arr[], int size, int findData){
     int mid;
 
     while(low <= high){
-        mid = (low+high) / 2;
-        if(findData > arr[mid]){
-            low = mid+1;
+        mid = (low+high) / 2;           // 중간 값의 인덱스를 추출
+        if(findData > arr[mid]){        // 비교값과 중간 인덱스의 값을 비교
+            low = mid+1;                // 만약 비교하는 값이 중간값보다 크다면, 기준을 올리고
         }else if (findData < arr[mid]){
-            high = mid-1;
+            high = mid-1;               // 중간값보다 작다면 기준을 내린다.
         }else{
-            return mid;
+            return mid;                 // 그것도 아니면 찾는 데이터를 얻는다.
         }
     }
-    return -1;
+    return -1;                          // 값을 찾지 ㅁ
 }
 
 int main(void){
