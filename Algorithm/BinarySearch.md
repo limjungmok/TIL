@@ -57,10 +57,10 @@ int binarySearch(int arr[], int size, int findData){
         }else if (findData < arr[mid]){
             high = mid-1;               // 중간값보다 작다면 기준을 내린다.
         }else{
-            return mid;                 // 그것도 아니면 찾는 데이터를 얻는다.
+            return mid;                 // 그것도 아니면 찾는 데이터를 얻은것이라 간주.
         }
     }
-    return -1;                          // 값을 찾지 ㅁ
+    return -1;                          // 값을 찾지 못하면 -1 반환
 }
 
 int main(void){
