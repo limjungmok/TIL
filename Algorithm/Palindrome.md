@@ -30,3 +30,27 @@ int main(void){
     return 0;
 }
 ```
+
+```java
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+
+		String str = "abcba";
+		boolean flag = true;
+
+		for(int i=0; i<str.length(); i++){
+			if(str.charAt(i) != str.charAt(str.length() - (i+1))){
+				flag = false;
+			}
+		}
+
+		if(flag == true){
+			System.out.println("앞뒤가 같다.");
+		}else{
+			System.out.println("앞뒤가 다르다,");
+		}
+	}
+}
+```
