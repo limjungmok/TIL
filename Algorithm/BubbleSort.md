@@ -29,11 +29,11 @@ for문을 2번 이용하기때문에 수행시간은 O(n^2)이다.<br>
 #include <iostream>
 using namespace std;
 
-void swap(int *a, int *b){
+void swap(int * a, int * b){
     int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
+    temp = * a;
+    * a = * b;
+    * b = temp;
 }
 
 
@@ -53,4 +53,39 @@ int main(void){
     }
     return 0;
 }
+```
+
+```java
+
+public class BubbleSort {
+
+	public static void Bubble(int arr[]){
+
+		int length = arr.length;
+		for(int i=0; i<length-1; i++){
+			for(int j=0; j<length-1-i; j++){
+				if(arr[j] > arr[j+1]){
+					int temp = arr[j+1];
+					arr[j+1] = arr[j];
+					arr[j] = temp;
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		int arr[] = {5,2,4,3,1};
+
+		for(int i=0; i<arr.length; i++){
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+		Bubble(arr);
+
+		for(int i=0; i<arr.length; i++){
+			System.out.print(arr[i]+" ");
+		}
+	}
+}
+
 ```
