@@ -1,7 +1,11 @@
 #**선택 정렬**
 
-arr[1] 배열 인자를 시작으로, 한칸 앞의 인자들과 하나씩 비교해가며 자신보다 큰 숫자들을 바꾼다.<br>
+0번째 배열을 최소값으로 설정 한 뒤, 뒤에 따라오는 모든 배열과 비교를 시작한다.</br>
+자신보다 작은 배열값을 만날 때 마다 최소값을 갱신하고,</br>
+다음 순서로 넘어가기 전에 루프를 시작했던 인덱스와 최소값 인덱스를 swap 한다.</br>
 for문을 2번 이용하기 때문에 수행시간은 O(N^2)<br>
+* 단, 이미 정렬이 되어있는 배열의 경우 한 번씩밖에 비교하지 않기때문에 수행시간 O(N)<br>
+
 
 ###**1. 흐름**
 
@@ -10,30 +14,33 @@ for문을 2번 이용하기 때문에 수행시간은 O(N^2)<br>
 </br>
 
 첫번째 반복</br>
-2 5 4 3 1(2,5 비교)</br>
+5 2 4 3 1 - 최소값 2</br>
+5 2 4 3 1 - 최소값 2</br>
+5 2 4 3 1 - 최소값 2</br>
+5 2 4 3 1 - 최소값 1</br>
+1 2 4 3 5
 </br>
 
 두 번째 반복</br>
-2 4 5 3 1(5,4 비교)</br>
-2 4 5 3 1(2,4 비교)</br>
+1 2 4 3 5 - 최소값 4</br>
+1 2 4 3 5 - 최소값 3</br>
+1 2 4 3 5 - 최소값 3</br>
+1 2 3 4 5
 </br>
 
 세 번째 반복</br>
-2 4 3 5 1(5,3 비교)</br>
-2 3 4 5 1(4,3 비교)</br>
-2 3 4 5 1(2,3 비교)</br>
+1 2 3 4 5 - 최소값 4</br>
+1 2 3 4 5
 </br>
 
 네 번째 반복</br>
-2 3 4 1 5(5,1 비교)</br>
-2 3 1 4 5(4,1 비교)</br>
-2 1 3 4 5(3,1 비교)</br>
-1 2 3 4 5(2,1 비교)</br>
+1 2 3 4 5 - 최소값 5</br>
+1 2 3 4 5
 </br>
 
-> 총 배열의 크기 -1 만큼 순회한다.</br>
-> i 번째 순회때 비교 할 초기값 arr[i]을 Key 에 담아놓고, </br>
-> 시작 인덱스의 바로 앞 배열인자와 버블소트 방식으로 역순으로 비교한다.</br>
+> 반복을 총 배열의 크기만큼 회전한다.</br>
+> 한 번 반복할 때 마다 내부에서 배열을 모두 검사하고,</br>
+> 최소값을 갱신 해 나간다.
 <br>
 
 ###**2. 소스코드**
@@ -41,17 +48,24 @@ for문을 2번 이용하기 때문에 수행시간은 O(N^2)<br>
 #include <iostream>
 using namespace std;
 
+void swap(int * a, int * b){
+    int temp;
+    temp = * a;
+    * a = * b;
+    * b = temp;
+}
+
 int main(void){
     int arr[5] = {5, 2, 4, 3, 1};
 
-    for(int i=1; i<5; i++){          // 초기 1번째 인덱스 값부터 자신의 앞에 모든 배열과 비교한다.
-        int key = arr[i];            // 값 자체를 변수에 담아둔다.
-        for(int j=i-1; j > -1; j--){ // 버블소트를 역순으로 하는 느낌
-            if(arr[j] > key){        // Key 값보다 앞에있는 값이 크다면, 배열 순서를 바꾸어준다.
-                arr[j+1] = arr[j];
-                arr[j] = key;
+    for(int i = 0 ; i < 5 ; i++){
+        int min = i;
+        for(int j = i+1 ; j< 5; j++){
+            if(arr[min] > arr[j]){
+                min = j;
             }
         }
+        swap(arr[i], arr[min]);
     }
 
     for(int i=0; i<5; i++){
@@ -59,6 +73,46 @@ int main(void){
     }
     return 0;
 }
+```
 
+```java
+
+public class SelectionSort {
+
+	public static void Selection(int arr[]){
+		int length = arr.length;
+
+		for(int i=0; i < length; i++){
+			int min = i;
+
+			for(int j = i+1; j < length; j++){
+				if(arr[min] > arr[j]){
+					min = j;
+				}
+			}
+
+			int temp = arr[min];
+			arr[min] = arr[i];
+			arr[i] = temp;
+		}
+	}
+
+	public static void main(String[] args) {
+
+		int arr[] = {5,2,4,3,1};
+
+		for(int i=0; i < arr.length; i++){
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+
+		Selection(arr);
+
+		for(int i=0; i < arr.length; i++){
+			System.out.print(arr[i]+" ");
+		}
+	}
+
+}
 
 ```
