@@ -67,7 +67,7 @@ public class InsertSort {
 	public static void Insert(int arr[]){
 		int length = arr.length;
 
-		for(int i=1; i<length; i++){
+		for(int i = 1; i < length; i++){
 			int key = arr[i];
 
 			for(int j = i-1; j > -1; j--){
@@ -83,14 +83,14 @@ public class InsertSort {
 
 		int arr[] = {5,2,4,3,1};
 
-		for(int i=0; i<arr.length; i++){
+		for(int i=0; i < arr.length; i++){
 			System.out.print(arr[i]+" ");
 		}
 		System.out.println();
 
 		Insert(arr);
 
-		for(int i=0; i<arr.length; i++){
+		for(int i=0; i < arr.length; i++){
 			System.out.print(arr[i]+" ");
 		}
 	}
