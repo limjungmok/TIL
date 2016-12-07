@@ -82,10 +82,10 @@ public class SelectionSort {
 	public static void Selection(int arr[]){
 		int length = arr.length;
 
-		for(int i=0; i < length; i++){
+		for(int i = 0; i < length; i++){
 			int min = i;
 
-			for(int j = i+1; j < length; j++){
+			for(int j = i + 1; j < length; j++){
 				if(arr[min] > arr[j]){
 					min = j;
 				}
