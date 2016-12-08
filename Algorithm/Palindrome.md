@@ -38,11 +38,12 @@ public class Palindrome {
 	public static void main(String[] args) {
 
 		String str = "abcba";
-		boolean flag = true;
+		boolean flag = true;	//초기에 true로 설정 해 놓은 뒤
 
 		for(int i=0; i<str.length(); i++){
 			if(str.charAt(i) != str.charAt(str.length() - (i+1))){
-				flag = false;
+				flag = false;	//만약 한 번 이라도 대칭 문자가 다르면, false로 하고 break;
+				break;
 			}
 		}
 
