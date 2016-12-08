@@ -71,3 +71,62 @@ int main(void){
     else cout<<"배열에 찾는 데이터가 없음";
 }
 ```
+```java
+
+public class BinarySearch {
+
+	public static void quickSearch(int arr[], int low, int high){
+
+		int pivot = arr[(low+high)/2];
+		int L = low;
+		int R = high;
+
+		while(L <= R){
+			while(arr[L] < pivot) L++;
+			while(arr[R] > pivot) R--;
+
+			if(L <= R){
+				int temp = arr[L];
+				arr[L] = arr[R];
+				arr[R] = temp;
+
+				L++;
+				R--;
+			}
+
+			if(low < R) quickSearch(arr, low, R);
+			if(high > L)quickSearch(arr, L, high);
+		}
+	}
+
+	public static int binarySearch(int arr[], int length, int findData){
+
+		int low = 0;
+		int high = length;
+		int mid;
+
+		while(low <= high){
+			mid = (low+high)/2;
+
+			if(findData > arr[mid]){
+				low = mid+1;
+			}else if(findData < arr[mid]){
+				high = mid-1;
+			}else{
+				return mid;
+			}
+		}
+		return -1;
+	}
+
+	public static void main(String[] args) {
+		int arr[] = {5, 2, 4, 6, 7, 3, 8};
+
+		quickSearch(arr, 0, arr.length-1);
+
+		int result = binarySearch(arr, arr.length-1, 3);
+
+		System.out.println("배열의 "+result+"번째에 위치합니다.");
+	}
+}
+```
