@@ -44,6 +44,36 @@ int main(void){
     }
 }
 ```
+```java
+public class Prime {
+	public static void main(String[] args) {
+
+		Integer[] arr = new Integer[101]; // 총 0 ~ 100 까지 100개의 배열을 셋
+
+		for(int i=0; i<101; i++){ // 초기값을 1로 두며, 앞으로 0으로 셋팅하며 지워갈거다.
+			arr[i] = 1;
+		}
+
+		for(int i=2; i<101; i++){	// 소수는 2부터니까, 2부터 100까지 체크한다.
+			for(int j=i+i; j<101; j=j+i){	// 시작한 2의 배수부터 모두 0으로 체크해주는
+				if(arr[j] == 0){			// 만약 0으로 체크되어있으면 넘어가
+					continue;
+				}else{
+					arr[j] = 0;				// 체크가 되어있지 않다면 0으로 바꿔준다.
+				}
+			}
+		}
+
+		for(int i=2; i<101; i++){
+			if(arr[i] == 1){				// 1은 곧 소수를 의미하며, 소수인 인덱스만 나열 해 준다.
+				System.out.print(i+" ");
+			}else{
+				continue;
+			}
+		}
+	}
+}
+```
 
 ###**3. 참고**
 
