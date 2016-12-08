@@ -53,7 +53,7 @@ public class GCD_LCM {
 			return gcd(b, a%b);
 		}
 	}
-	
+
 	public static int lcm(int a, int b, int gcd){
 		return (a*b)/gcd;
 	}
