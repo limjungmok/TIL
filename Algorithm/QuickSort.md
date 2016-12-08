@@ -26,11 +26,11 @@ Pivot을 기준으로 큰 값은 오른쪽으로 옮기는 정렬방식</br>
 #include <iostream>
 using namespace std;
 
-void swap(int *a, int *b){
+void swap(int * a, int * b){
     int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
+    temp = * a;
+    * a = * b;
+    * b = temp;
 }
 
 
@@ -63,5 +63,49 @@ int main(void){
         cout<<arr[i]<<" ";
     }
     return 0;
+}
+```
+```java
+
+public class QuickSort {
+
+	public static void quickSort(int arr[], int low, int high){
+
+		int pivot = arr[(low+high)/2];
+	    int L = low;
+	    int R = high;
+
+	    while(L <= R){
+	        while(arr[L] < pivot) L++;
+	        while(arr[R] > pivot) R--;
+	        if(L<=R){
+	        	int temp = arr[L];
+	        	arr[L] = arr[R];
+	        	arr[R] = temp;
+	            L++;
+	            R--;
+	        }
+
+	        if(low < R) quickSort(arr, low, R);
+	        if(high > L) quickSort(arr, L, high);
+	    }
+	}
+
+	public static void main(String[] args) {
+
+	    int arr[] = {5, 2, 4, 6, 7, 3, 8};
+
+	    System.out.println("quick");
+		for(int i=0; i<arr.length; i++){
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+
+		quickSort(arr, 0, arr.length-1);
+
+		for(int i=0; i<arr.length; i++){
+			System.out.print(arr[i]+" ");
+		}		
+	}
 }
 ```
